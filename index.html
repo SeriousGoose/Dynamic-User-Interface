@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style>
+        #dropDownMenu{
+            width: 100px;
+        }
+        #dropDownHeader{
+            background-color: grey;
+            width: 100px;
+            text-align: center;
+        }
+        .dropDownItems{
+            visibility: hidden;
+            
+            background-color: rgb(182, 181, 181);
+            opacity: 0;
+            text-align: center;
+            transition: opacity 500ms ease-in-out;
+            
+        }
+
+        .visible{
+            visibility: visible;
+            opacity: 1;
+            
+        }
+        .container{
+            width:800px;
+            margin: auto;
+            overflow: hidden;   
+        }
+        .frame{
+            display: flex;
+            width: 100%;
+            height: 500px;   
+        }
+        
+        .image{
+            min-width: 800px; 
+        }
+        .imgButtons{
+            display: flex;
+            position: relative;
+            left: 330px;
+            
+            
+        }
+        .imgSelector{
+            height:20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 1px solid black;
+            margin:10px;
+        }
+        .imgSelector:hover{
+            background-color: black;
+            opacity: .5;
+        }
+        #img1{
+            background-color: black;
+            opacity: .5;
+        }
+        
+
+        
+
+        
+
+
+    </style>
+    
+</head>
+<body>
+    <div id = "header">
+        <h1 id = "title">Dynamic User Interface</h1>
+    </div>
+    <div id = "navBar">
+        <div id = "navBarItems">
+            <div id = "dropDownMenu">
+                <div id = "dropDownHeader">Menu</div>
+                <div id = "dropDownItems" class = "dropDownItems">
+                    <div >Settings</div>
+                    <div >Users</div>
+                    <div>My Account</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "container">
+        <div class = "frame">
+            <img class = "image" id = "lastImage" src = "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg">
+            <img class = "image" src = "https://www.helpguide.org/wp-content/uploads/table-with-grains-vegetables-fruit-768.jpg">
+            <img class = "image" src = "https://post.healthline.com/wp-content/uploads/2020/07/pizza-beer-1200x628-facebook-1200x628.jpg">
+            <img class = "image" src = "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg">
+            <img class = "image" id = "firstImage" src = "https://www.helpguide.org/wp-content/uploads/table-with-grains-vegetables-fruit-768.jpg">
+        </div>
+        <div class = "imgButtons">
+            <div id = "img1" class = "imgSelector"></div>
+            <div id = "img2" class = "imgSelector"></div>
+            <div id = "img3" class = "imgSelector"></div>
+        </div>
+        <div id = "buttons">
+            <button id = "leftButton">Prev</button>
+            <button id = "rightButton">Next</button>
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+</html>
